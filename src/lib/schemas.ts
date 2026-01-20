@@ -96,3 +96,69 @@ export function getLocalBusinessSchema() {
     },
   };
 }
+
+export function getBlogSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: `${siteConfig.name} Blog`,
+    url: `${siteConfig.url}/blog`,
+    description:
+      "Insights on landing pages, e-commerce, and SaaS development from the team at Elan Logic.",
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+  };
+}
+
+export function getBlogPostSchema(post: {
+  title: string;
+  description: string;
+  slug: string;
+  publishedAt: string;
+  updatedAt?: string;
+  author: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    url: `${siteConfig.url}/blog/${post.slug}`,
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt || post.publishedAt,
+    author: {
+      "@type": "Organization",
+      name: post.author,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/og/default.svg`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteConfig.url}/blog/${post.slug}`,
+    },
+  };
+}
+
+export function getBreadcrumbSchema(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}

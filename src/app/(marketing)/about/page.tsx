@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Target, Heart, Zap } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Card, CardContent } from "@/components/ui/card";
+import nelsonImage from "@/assets/nelson-1.jpg";
 
 export const metadata: Metadata = {
   title: "About",
@@ -42,17 +44,29 @@ export default function AboutPage() {
     <>
       <section className="py-20 md:py-32">
         <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Building the Web,{" "}
-              <span className="text-primary">One Project at a Time</span>
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground">
-              Elan Logic is a web development agency dedicated to helping
-              businesses succeed online. We combine technical expertise with
-              creative design to build websites that not only look great but
-              also drive measurable results.
-            </p>
+          <div className="grid gap-12 md:grid-cols-2 md:items-center">
+            <div>
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+                Building the Web,{" "}
+                <span className="text-primary">One Project at a Time</span>
+              </h1>
+              <p className="mt-6 text-lg text-muted-foreground">
+                Elan Logic is a web development agency dedicated to helping
+                businesses succeed online. We combine technical expertise with
+                creative design to build websites that not only look great but
+                also drive measurable results.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <Image
+                src={nelsonImage}
+                alt="Nelson Tamashiro - Founder of Elan Logic"
+                className="rounded-2xl shadow-lg"
+                width={400}
+                height={400}
+                priority
+              />
+            </div>
           </div>
         </Container>
       </section>

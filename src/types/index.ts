@@ -36,3 +36,18 @@ export interface NavItem {
   label: string;
   href: string;
 }
+
+export type BlogCategory = 'landing-pages' | 'ecommerce' | 'saas';
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  publishedAt: string;
+  updatedAt?: string;
+  category: BlogCategory;
+  categoryLabel: string;
+  author: string;
+  readingTime?: string;
+  featured?: boolean;
+}
