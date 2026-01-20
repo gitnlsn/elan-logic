@@ -1,0 +1,7 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#09090B"/>
+  <rect x="40" y="40" width="1120" height="550" rx="16" stroke="#27272A" stroke-width="2" fill="none"/>
+  <text x="600" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="#FAFAFA" text-anchor="middle">Elan Logic</text>
+  <text x="600" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="32" fill="#A1A1AA" text-anchor="middle">Web Development Agency</text>
+  <text x="600" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#71717A" text-anchor="middle">Landing Pages | E-commerce | SaaS</text>
+</svg>
