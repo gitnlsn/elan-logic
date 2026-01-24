@@ -1,0 +1,234 @@
+{
+  "metadata": {
+    "title": "Elan Logic | Agência de Desenvolvimento Web",
+    "description": "Agência de desenvolvimento web especializada em sites de alta conversão, e-commerce e soluções SaaS. Criamos sites que convertem visitantes em clientes.",
+    "homeTitle": "Elan Logic | Agência de Desenvolvimento Web",
+    "homeDescription": "Agência de desenvolvimento web especializada em landing pages de alta conversão, lojas de e-commerce e aplicações SaaS. Criamos sites que transformam visitantes em clientes.",
+    "aboutTitle": "Sobre Nós",
+    "aboutDescription": "Conheça a Elan Logic - uma agência de desenvolvimento web focada em criar sites de alta conversão que geram resultados. 50+ projetos entregues com 95% de satisfação dos clientes.",
+    "servicesTitle": "Serviços",
+    "servicesDescription": "Serviços profissionais de desenvolvimento web: Landing Pages para conversões, lojas de E-commerce para vendas online e aplicações SaaS para negócios escaláveis. Soluções personalizadas.",
+    "blogTitle": "Blog",
+    "blogDescription": "Insights sobre landing pages, e-commerce e desenvolvimento SaaS. Aprenda a construir melhores produtos web com guias da equipe Elan Logic.",
+    "contactTitle": "Contato",
+    "contactDescription": "Entre em contato com a Elan Logic. Fale conosco via WhatsApp, email ou redes sociais para discutir seu projeto de desenvolvimento web."
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "services": "Serviços",
+    "blog": "Blog",
+    "contact": "Contato"
+  },
+  "header": {
+    "getInTouch": "Fale Conosco"
+  },
+  "footer": {
+    "navigation": "Navegação",
+    "connect": "Conecte-se",
+    "copyright": "Todos os direitos reservados."
+  },
+  "hero": {
+    "title": "Sites que convertem",
+    "titleHighlight": "visitantes em clientes",
+    "description": "Projetamos e desenvolvemos sites de alto desempenho que geram resultados. De landing pages a e-commerce e aplicações SaaS, criamos experiências digitais que fazem seu negócio crescer.",
+    "startProject": "Iniciar Seu Projeto",
+    "viewServices": "Ver Serviços"
+  },
+  "servicesPreview": {
+    "title": "O Que Construímos",
+    "description": "Soluções personalizadas para cada fase do seu negócio",
+    "exploreAll": "Explorar Todos os Serviços"
+  },
+  "services": {
+    "pageTitle": "Serviços Sob Medida para",
+    "pageTitleHighlight": "Seu Negócio",
+    "pageDescription": "De landing pages simples a aplicações SaaS complexas, temos a expertise para dar vida à sua visão.",
+    "whatsIncluded": "O Que Está Incluído:",
+    "notSure": "Não Sabe o Que Precisa?",
+    "notSureDescription": "Vamos conversar sobre o seu projeto. Ajudaremos você a identificar a melhor solução para os objetivos do seu negócio.",
+    "letsTalk": "Vamos Conversar",
+    "landingPage": {
+      "title": "Landing Page",
+      "description": "Landing pages de alta conversão projetadas para transformar visitantes em clientes. Perfeitas para lançamentos de produtos, campanhas de marketing e geração de leads.",
+      "features": {
+        "responsive": "Design responsivo para todos os dispositivos",
+        "conversion": "Layouts otimizados para conversão",
+        "fast": "Velocidade de carregamento rápida",
+        "seo": "Estrutura pronta para SEO"
+      }
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Lojas online completas que facilitam as vendas. De catálogos de produtos a pagamentos seguros, construímos tudo que você precisa para ter sucesso.",
+      "features": {
+        "catalog": "Gerenciamento de catálogo de produtos",
+        "payment": "Integração de pagamento seguro",
+        "inventory": "Controle de estoque",
+        "orders": "Sistema de gerenciamento de pedidos"
+      }
+    },
+    "saas": {
+      "title": "SaaS",
+      "description": "Aplicações software-as-a-service escaláveis construídas para crescimento. De autenticação a faturamento, cuidamos da complexidade técnica.",
+      "features": {
+        "auth": "Autenticação e autorização de usuários",
+        "billing": "Integração de cobrança por assinatura",
+        "dashboard": "Painel administrativo",
+        "api": "Desenvolvimento de API"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Nosso Trabalho",
+    "description": "Projetos reais, resultados reais",
+    "visit": "Visitar {title}",
+    "quartierFlow": {
+      "title": "Quartier Flow",
+      "description": "Uma plataforma moderna de e-commerce para varejo boutique, com experiência de compra fluida e apresentação elegante de produtos."
+    },
+    "laluDecor": {
+      "title": "Lalu Decor",
+      "description": "Um site de showcase de design de interiores com visuais impressionantes e experiência intuitiva de galeria para inspiração em decoração."
+    },
+    "savoirLink": {
+      "title": "Savoir Link",
+      "description": "Uma plataforma de networking profissional e compartilhamento de conhecimento conectando especialistas com pessoas que buscam orientação especializada."
+    }
+  },
+  "process": {
+    "title": "Nosso Processo",
+    "description": "Uma abordagem comprovada para entregar resultados excepcionais",
+    "step": "Etapa {number}",
+    "discovery": {
+      "title": "Descoberta",
+      "description": "Começamos entendendo seu negócio, objetivos e público-alvo para criar uma base estratégica para seu projeto."
+    },
+    "design": {
+      "title": "Design",
+      "description": "Nossos designers criam interfaces impressionantes e focadas no usuário que se alinham com sua marca e otimizam conversões."
+    },
+    "development": {
+      "title": "Desenvolvimento",
+      "description": "Construímos seu site usando tecnologias modernas, garantindo desempenho rápido, segurança e escalabilidade."
+    },
+    "launch": {
+      "title": "Lançamento",
+      "description": "Após testes completos, publicamos seu site e fornecemos suporte contínuo para garantir sucesso contínuo."
+    }
+  },
+  "testimonials": {
+    "title": "O Que Nossos Clientes Dizem",
+    "description": "Histórias de sucesso de empresas que ajudamos a crescer",
+    "testimonial1": {
+      "content": "A Elan Logic transformou nossa presença online. Nosso novo site de e-commerce dobrou nossa taxa de conversão e os clientes adoram a experiência de compra fluida.",
+      "name": "Maria Santos",
+      "role": "Fundadora",
+      "company": "TechStart Brasil"
+    },
+    "testimonial2": {
+      "content": "A equipe da Elan Logic entendeu nossa visão desde o primeiro dia. Eles construíram uma plataforma que equilibra perfeitamente funcionalidade com design bonito.",
+      "name": "Lucas Fernandes",
+      "role": "CEO",
+      "company": "Nova Consulting"
+    },
+    "testimonial3": {
+      "content": "Trabalhar com a Elan Logic foi muito fácil. Eles entregaram um site de portfólio impressionante que mostra nosso trabalho exatamente como imaginávamos.",
+      "name": "Ana Costa",
+      "role": "Diretora Criativa",
+      "company": "Studio Criativo"
+    }
+  },
+  "cta": {
+    "title": "Pronto para Transformar Sua Presença Online?",
+    "description": "Vamos discutir como podemos ajudá-lo a alcançar seus objetivos de negócio com um site que converte.",
+    "getStarted": "Comece Hoje"
+  },
+  "about": {
+    "heroTitle": "Construindo a Web,",
+    "heroTitleHighlight": "Um Projeto por Vez",
+    "heroDescription": "A Elan Logic é uma agência de desenvolvimento web dedicada a ajudar empresas a ter sucesso online. Combinamos expertise técnica com design criativo para construir sites que não apenas ficam ótimos, mas também geram resultados mensuráveis.",
+    "founderAlt": "Nelson Tamashiro - Fundador da Elan Logic",
+    "storyTitle": "Nossa História",
+    "storyP1": "Fundada com uma missão simples: ajudar empresas a prosperar no mundo digital. Notamos que muitas empresas lutavam para traduzir sua visão em uma presença online eficaz, frequentemente se conformando com templates genéricos ou soluções caras demais.",
+    "storyP2": "Nos propusemos a mudar isso oferecendo desenvolvimento web personalizado que é acessível e orientado a resultados. Hoje, trabalhamos com empresas de todos os tamanhos, de startups lançando sua primeira landing page a empresas estabelecidas escalando suas operações de e-commerce.",
+    "projectsDelivered": "Projetos Entregues",
+    "clientSatisfaction": "Satisfação do Cliente",
+    "yearsExperience": "Anos de Experiência",
+    "valuesTitle": "Nossos Valores",
+    "valuesDescription": "Os princípios que guiam tudo o que fazemos",
+    "resultsDriven": {
+      "title": "Orientado a Resultados",
+      "description": "Medimos o sucesso pelos resultados que entregamos para nossos clientes. Cada linha de código é escrita pensando em conversão e desempenho."
+    },
+    "clientFocused": {
+      "title": "Foco no Cliente",
+      "description": "Tratamos cada projeto como uma parceria. Seu sucesso é nosso sucesso, e trabalhamos de perto com você para entender e alcançar seus objetivos."
+    },
+    "innovationFirst": {
+      "title": "Inovação em Primeiro Lugar",
+      "description": "Estamos na vanguarda da tecnologia web, usando ferramentas e frameworks modernos para construir soluções rápidas, seguras e escaláveis."
+    }
+  },
+  "contact": {
+    "heroTitle": "Vamos Construir",
+    "heroTitleHighlight": "Algo Incrível",
+    "heroDescription": "Pronto para iniciar seu projeto? Adoraríamos ouvir de você. Entre em contato e vamos discutir como podemos ajudar a crescer seu negócio.",
+    "whatsappPrimary": "WhatsApp é Nosso Canal Principal",
+    "whatsappDescription": "Para a resposta mais rápida, entre em contato conosco pelo WhatsApp. Normalmente estamos disponíveis durante o horário comercial e respondemos em poucas horas.",
+    "chatOnWhatsApp": "Conversar no WhatsApp",
+    "otherWays": "Outras Formas de Nos Contatar",
+    "email": "Email",
+    "location": "Localização",
+    "locationValue": "Remoto - Mundial",
+    "connectWithUs": "Conecte-se Conosco"
+  },
+  "blog": {
+    "heroTitle": "Insights para",
+    "heroTitleHighlight": "Construir Melhores",
+    "heroTitleEnd": "Produtos Web",
+    "heroDescription": "Guias práticos sobre landing pages, e-commerce e desenvolvimento SaaS. Aprenda o que é necessário para construir produtos web que convertem.",
+    "featuredArticles": "Artigos em Destaque",
+    "allArticles": "Todos os Artigos",
+    "featured": "Destaque",
+    "readMore": "Ler mais",
+    "backToBlog": "Voltar ao Blog",
+    "by": "Por",
+    "relatedArticles": "Artigos Relacionados",
+    "categories": {
+      "landingPages": "Landing Pages",
+      "ecommerce": "E-commerce",
+      "saas": "SaaS"
+    }
+  },
+  "blogCta": {
+    "landingPages": {
+      "heading": "Pronto para criar sua landing page?",
+      "description": "Somos especialistas em criar landing pages de alta conversão que transformam visitantes em clientes. Vamos discutir seu projeto.",
+      "whatsappMessage": "Olá! Acabei de ler seu artigo sobre landing pages e gostaria de discutir meu projeto."
+    },
+    "ecommerce": {
+      "heading": "Pronto para lançar sua loja online?",
+      "description": "Construímos soluções de e-commerce que escalam com seu negócio. De Shopify a plataformas personalizadas, temos você coberto.",
+      "whatsappMessage": "Olá! Acabei de ler seu artigo sobre e-commerce e gostaria de discutir meu projeto."
+    },
+    "saas": {
+      "heading": "Pronto para construir seu produto SaaS?",
+      "description": "Ajudamos fundadores a transformar suas ideias em produtos de software escaláveis. Vamos conversar sobre seu MVP ou próximo recurso.",
+      "whatsappMessage": "Olá! Acabei de ler seu artigo sobre desenvolvimento SaaS e gostaria de discutir meu projeto."
+    },
+    "chatOnWhatsApp": "Conversar no WhatsApp",
+    "viewServices": "Ver Serviços"
+  },
+  "whatsapp": {
+    "ariaLabel": "Entre em contato pelo WhatsApp",
+    "defaultMessage": "Olá! Estou interessado em saber mais sobre seus serviços de desenvolvimento web."
+  },
+  "common": {
+    "siteDescription": "Agência de desenvolvimento web especializada em sites de alta conversão, e-commerce e soluções SaaS."
+  },
+  "localeSwitcher": {
+    "label": "Idioma",
+    "switchTo": "Mudar para {locale}"
+  }
+}

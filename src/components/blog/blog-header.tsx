@@ -1,15 +1,24 @@
-import Link from "next/link";
+"use client";
+
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
 import type { BlogPost } from "@/types";
-import { formatDate } from "@/lib/blog";
+import { formatDate, getReadingTime } from "@/lib/blog";
 
 interface BlogHeaderProps {
   post: BlogPost;
+  locale?: string;
 }
 
-export function BlogHeader({ post }: BlogHeaderProps) {
+export function BlogHeader({ post, locale = "en" }: BlogHeaderProps) {
+  const t = useTranslations("blog");
+
+  const readingTime = getReadingTime(post.slug, locale);
+  const formattedDate = formatDate(post.publishedAt, locale);
+
   return (
     <section className="border-b bg-muted/30 py-12 md:py-16">
       <Container>
@@ -18,7 +27,7 @@ export function BlogHeader({ post }: BlogHeaderProps) {
           className="mb-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
         >
           <ArrowLeft className="h-4 w-4" />
-          Back to Blog
+          {t("backToBlog")}
         </Link>
 
         <div className="mb-4 flex items-center gap-3">
@@ -36,15 +45,15 @@ export function BlogHeader({ post }: BlogHeaderProps) {
         <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
           <span className="flex items-center gap-1.5">
             <Calendar className="h-4 w-4" />
-            {formatDate(post.publishedAt)}
+            {formattedDate}
           </span>
-          {post.readingTime && (
-            <span className="flex items-center gap-1.5">
-              <Clock className="h-4 w-4" />
-              {post.readingTime}
-            </span>
-          )}
-          <span>By {post.author}</span>
+          <span className="flex items-center gap-1.5">
+            <Clock className="h-4 w-4" />
+            {readingTime}
+          </span>
+          <span>
+            {t("by")} {post.author}
+          </span>
         </div>
       </Container>
     </section>

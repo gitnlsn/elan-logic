@@ -1,9 +1,16 @@
-import Link from "next/link";
+"use client";
+
 import { Layout, ShoppingCart, Cloud, ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { Container } from "@/components/ui/container";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { services } from "@/data/services";
 
 const iconMap: Record<string, React.ReactNode> = {
   Layout: <Layout className="h-8 w-8" />,
@@ -12,15 +19,39 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export function ServicesPreview() {
+  const t = useTranslations("servicesPreview");
+  const tServices = useTranslations("services");
+
+  const services = [
+    {
+      id: "landing-page",
+      title: tServices("landingPage.title"),
+      description: tServices("landingPage.description"),
+      icon: "Layout",
+    },
+    {
+      id: "ecommerce",
+      title: tServices("ecommerce.title"),
+      description: tServices("ecommerce.description"),
+      icon: "ShoppingCart",
+    },
+    {
+      id: "saas",
+      title: tServices("saas.title"),
+      description: tServices("saas.description"),
+      icon: "Cloud",
+    },
+  ];
+
   return (
     <section className="bg-muted/50 py-20">
       <Container>
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            What We Build
+            {t("title")}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Tailored solutions for every stage of your business
+            {t("description")}
           </p>
         </div>
 
@@ -44,7 +75,7 @@ export function ServicesPreview() {
         <div className="mt-12 text-center">
           <Button variant="outline" size="lg" asChild>
             <Link href="/services">
-              Explore All Services
+              {t("exploreAll")}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

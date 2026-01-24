@@ -1,0 +1,234 @@
+{
+  "metadata": {
+    "title": "Elan Logic | Web Development Agency",
+    "description": "Web development agency specializing in high-converting websites, e-commerce, and SaaS solutions. We build websites that convert visitors into customers.",
+    "homeTitle": "Elan Logic | Web Development Agency",
+    "homeDescription": "Web development agency specializing in high-converting landing pages, e-commerce stores, and SaaS applications. We build websites that turn visitors into customers.",
+    "aboutTitle": "About",
+    "aboutDescription": "Learn about Elan Logic - a web development agency focused on building high-converting websites that drive business results. 50+ projects delivered with 95% client satisfaction.",
+    "servicesTitle": "Services",
+    "servicesDescription": "Professional web development services: Landing Pages for conversions, E-commerce stores for online sales, and SaaS applications for scalable businesses. Custom-built solutions.",
+    "blogTitle": "Blog",
+    "blogDescription": "Insights on landing pages, e-commerce, and SaaS development. Learn how to build better web products with guides from the Elan Logic team.",
+    "contactTitle": "Contact",
+    "contactDescription": "Get in touch with Elan Logic. Contact us via WhatsApp, email, or social media to discuss your web development project."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "header": {
+    "getInTouch": "Get in Touch"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "connect": "Connect",
+    "copyright": "All rights reserved."
+  },
+  "hero": {
+    "title": "Websites that convert",
+    "titleHighlight": "visitors into customers",
+    "description": "We design and develop high-performing websites that drive results. From landing pages to e-commerce and SaaS applications, we build digital experiences that grow your business.",
+    "startProject": "Start Your Project",
+    "viewServices": "View Services"
+  },
+  "servicesPreview": {
+    "title": "What We Build",
+    "description": "Tailored solutions for every stage of your business",
+    "exploreAll": "Explore All Services"
+  },
+  "services": {
+    "pageTitle": "Services Tailored to",
+    "pageTitleHighlight": "Your Business",
+    "pageDescription": "From simple landing pages to complex SaaS applications, we have the expertise to bring your vision to life.",
+    "whatsIncluded": "What's Included:",
+    "notSure": "Not Sure What You Need?",
+    "notSureDescription": "Let's have a conversation about your project. We'll help you identify the best solution for your business goals.",
+    "letsTalk": "Let's Talk",
+    "landingPage": {
+      "title": "Landing Page",
+      "description": "High-converting landing pages designed to turn visitors into customers. Perfect for product launches, marketing campaigns, and lead generation.",
+      "features": {
+        "responsive": "Responsive design for all devices",
+        "conversion": "Conversion-optimized layouts",
+        "fast": "Fast loading speeds",
+        "seo": "SEO-ready structure"
+      }
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Full-featured online stores that make selling easy. From product catalogs to secure payments, we build everything you need to succeed.",
+      "features": {
+        "catalog": "Product catalog management",
+        "payment": "Secure payment integration",
+        "inventory": "Inventory tracking",
+        "orders": "Order management system"
+      }
+    },
+    "saas": {
+      "title": "SaaS",
+      "description": "Scalable software-as-a-service applications built for growth. From authentication to billing, we handle the technical complexity.",
+      "features": {
+        "auth": "User authentication & authorization",
+        "billing": "Subscription billing integration",
+        "dashboard": "Admin dashboard",
+        "api": "API development"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "description": "Real projects, real results",
+    "visit": "Visit {title}",
+    "quartierFlow": {
+      "title": "Quartier Flow",
+      "description": "A modern e-commerce platform for boutique retail, featuring a seamless shopping experience and elegant product presentation."
+    },
+    "laluDecor": {
+      "title": "Lalu Decor",
+      "description": "An interior design showcase website with stunning visuals and an intuitive gallery experience for home decor inspiration."
+    },
+    "savoirLink": {
+      "title": "Savoir Link",
+      "description": "A professional networking and knowledge-sharing platform connecting experts with those seeking specialized guidance."
+    }
+  },
+  "process": {
+    "title": "Our Process",
+    "description": "A proven approach to delivering exceptional results",
+    "step": "Step {number}",
+    "discovery": {
+      "title": "Discovery",
+      "description": "We start by understanding your business, goals, and target audience to create a strategic foundation for your project."
+    },
+    "design": {
+      "title": "Design",
+      "description": "Our designers create stunning, user-focused interfaces that align with your brand and optimize for conversions."
+    },
+    "development": {
+      "title": "Development",
+      "description": "We build your website using modern technologies, ensuring fast performance, security, and scalability."
+    },
+    "launch": {
+      "title": "Launch",
+      "description": "After thorough testing, we deploy your site and provide ongoing support to ensure continued success."
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "description": "Success stories from businesses we've helped grow",
+    "testimonial1": {
+      "content": "Elan Logic transformed our online presence. Our new e-commerce site has doubled our conversion rate and customers love the seamless shopping experience.",
+      "name": "Maria Santos",
+      "role": "Founder",
+      "company": "TechStart Brasil"
+    },
+    "testimonial2": {
+      "content": "The team at Elan Logic understood our vision from day one. They built a platform that perfectly balances functionality with beautiful design.",
+      "name": "Lucas Fernandes",
+      "role": "CEO",
+      "company": "Nova Consulting"
+    },
+    "testimonial3": {
+      "content": "Working with Elan Logic was a breeze. They delivered a stunning portfolio site that showcases our work exactly how we envisioned it.",
+      "name": "Ana Costa",
+      "role": "Creative Director",
+      "company": "Studio Criativo"
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Online Presence?",
+    "description": "Let's discuss how we can help you achieve your business goals with a website that converts.",
+    "getStarted": "Get Started Today"
+  },
+  "about": {
+    "heroTitle": "Building the Web,",
+    "heroTitleHighlight": "One Project at a Time",
+    "heroDescription": "Elan Logic is a web development agency dedicated to helping businesses succeed online. We combine technical expertise with creative design to build websites that not only look great but also drive measurable results.",
+    "founderAlt": "Nelson Tamashiro - Founder of Elan Logic",
+    "storyTitle": "Our Story",
+    "storyP1": "Founded with a simple mission: to help businesses thrive in the digital world. We noticed that many companies struggled to translate their vision into an effective online presence, often settling for generic templates or overpriced solutions.",
+    "storyP2": "We set out to change that by offering custom web development that's both accessible and results-oriented. Today, we work with businesses of all sizes, from startups launching their first landing page to established companies scaling their e-commerce operations.",
+    "projectsDelivered": "Projects Delivered",
+    "clientSatisfaction": "Client Satisfaction",
+    "yearsExperience": "Years of Experience",
+    "valuesTitle": "Our Values",
+    "valuesDescription": "The principles that guide everything we do",
+    "resultsDriven": {
+      "title": "Results-Driven",
+      "description": "We measure success by the results we deliver for our clients. Every line of code is written with conversion and performance in mind."
+    },
+    "clientFocused": {
+      "title": "Client-Focused",
+      "description": "We treat every project as a partnership. Your success is our success, and we work closely with you to understand and achieve your goals."
+    },
+    "innovationFirst": {
+      "title": "Innovation First",
+      "description": "We stay at the forefront of web technology, using modern tools and frameworks to build fast, secure, and scalable solutions."
+    }
+  },
+  "contact": {
+    "heroTitle": "Let's Build",
+    "heroTitleHighlight": "Something Great",
+    "heroDescription": "Ready to start your project? We'd love to hear from you. Reach out and let's discuss how we can help grow your business.",
+    "whatsappPrimary": "WhatsApp is Our Primary Channel",
+    "whatsappDescription": "For the fastest response, reach out to us on WhatsApp. We're typically available during business hours and aim to respond within a few hours.",
+    "chatOnWhatsApp": "Chat on WhatsApp",
+    "otherWays": "Other Ways to Reach Us",
+    "email": "Email",
+    "location": "Location",
+    "locationValue": "Remote - Worldwide",
+    "connectWithUs": "Connect With Us"
+  },
+  "blog": {
+    "heroTitle": "Insights for",
+    "heroTitleHighlight": "Building Better",
+    "heroTitleEnd": "Web Products",
+    "heroDescription": "Practical guides on landing pages, e-commerce, and SaaS development. Learn what it takes to build web products that convert.",
+    "featuredArticles": "Featured Articles",
+    "allArticles": "All Articles",
+    "featured": "Featured",
+    "readMore": "Read more",
+    "backToBlog": "Back to Blog",
+    "by": "By",
+    "relatedArticles": "Related Articles",
+    "categories": {
+      "landingPages": "Landing Pages",
+      "ecommerce": "E-commerce",
+      "saas": "SaaS"
+    }
+  },
+  "blogCta": {
+    "landingPages": {
+      "heading": "Ready to build your landing page?",
+      "description": "We specialize in creating high-converting landing pages that turn visitors into customers. Let's discuss your project.",
+      "whatsappMessage": "Hi! I just read your article about landing pages and I'd like to discuss my project."
+    },
+    "ecommerce": {
+      "heading": "Ready to launch your online store?",
+      "description": "We build e-commerce solutions that scale with your business. From Shopify to custom platforms, we've got you covered.",
+      "whatsappMessage": "Hi! I just read your article about e-commerce and I'd like to discuss my project."
+    },
+    "saas": {
+      "heading": "Ready to build your SaaS product?",
+      "description": "We help founders turn their ideas into scalable software products. Let's talk about your MVP or next feature.",
+      "whatsappMessage": "Hi! I just read your article about SaaS development and I'd like to discuss my project."
+    },
+    "chatOnWhatsApp": "Chat on WhatsApp",
+    "viewServices": "View Services"
+  },
+  "whatsapp": {
+    "ariaLabel": "Contact us on WhatsApp",
+    "defaultMessage": "Hi! I'm interested in learning more about your web development services."
+  },
+  "common": {
+    "siteDescription": "Web development agency specializing in high-converting websites, e-commerce, and SaaS solutions."
+  },
+  "localeSwitcher": {
+    "label": "Language",
+    "switchTo": "Switch to {locale}"
+  }
+}

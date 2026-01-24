@@ -1,20 +1,51 @@
+"use client";
+
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { portfolio } from "@/data/portfolio";
 
 export function Portfolio() {
+  const t = useTranslations("portfolio");
+
+  const portfolio = [
+    {
+      id: "quartier-flow",
+      title: t("quartierFlow.title"),
+      description: t("quartierFlow.description"),
+      url: "https://www.quartierflow.store/",
+      image: "/images/portfolio/quartier-flow.svg",
+      tags: ["E-commerce", "Next.js", "Stripe"],
+    },
+    {
+      id: "lalu-decor",
+      title: t("laluDecor.title"),
+      description: t("laluDecor.description"),
+      url: "https://laludecor.vercel.app/",
+      image: "/images/portfolio/lalu-decor.svg",
+      tags: ["Portfolio", "React", "Tailwind CSS"],
+    },
+    {
+      id: "savoir-link",
+      title: t("savoirLink.title"),
+      description: t("savoirLink.description"),
+      url: "https://www.savoirlink.com/",
+      image: "/images/portfolio/savoir-link.svg",
+      tags: ["SaaS", "Next.js", "Authentication"],
+    },
+  ];
+
   return (
     <section className="py-20">
       <Container>
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Our Work
+            {t("title")}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Real projects, real results
+            {t("description")}
           </p>
         </div>
 
@@ -40,7 +71,7 @@ export function Portfolio() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground transition-colors hover:text-primary"
-                    aria-label={`Visit ${project.title}`}
+                    aria-label={t("visit", { title: project.title })}
                   >
                     <ExternalLink className="h-5 w-5" />
                   </a>

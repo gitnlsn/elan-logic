@@ -1,18 +1,46 @@
+"use client";
+
 import { Quote } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { Card, CardContent } from "@/components/ui/card";
-import { testimonials } from "@/data/testimonials";
 
 export function Testimonials() {
+  const t = useTranslations("testimonials");
+
+  const testimonials = [
+    {
+      id: "testimonial-1",
+      content: t("testimonial1.content"),
+      name: t("testimonial1.name"),
+      role: t("testimonial1.role"),
+      company: t("testimonial1.company"),
+    },
+    {
+      id: "testimonial-2",
+      content: t("testimonial2.content"),
+      name: t("testimonial2.name"),
+      role: t("testimonial2.role"),
+      company: t("testimonial2.company"),
+    },
+    {
+      id: "testimonial-3",
+      content: t("testimonial3.content"),
+      name: t("testimonial3.name"),
+      role: t("testimonial3.role"),
+      company: t("testimonial3.company"),
+    },
+  ];
+
   return (
     <section className="py-20">
       <Container>
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            What Our Clients Say
+            {t("title")}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Success stories from businesses we&apos;ve helped grow
+            {t("description")}
           </p>
         </div>
 

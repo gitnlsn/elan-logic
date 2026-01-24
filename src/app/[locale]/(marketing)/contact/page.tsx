@@ -1,25 +1,46 @@
 import type { Metadata } from "next";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/container";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppUrl, siteConfig } from "@/lib/constants";
 import { getLocalBusinessSchema } from "@/lib/schemas";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Get in touch with Elan Logic. Contact us via WhatsApp, email, or social media to discuss your web development project.",
-  openGraph: {
-    type: "website",
-    url: "https://elanlogic.com/contact",
-  },
-  alternates: {
-    canonical: "/contact",
-  },
-};
+interface ContactPageProps {
+  params: Promise<{ locale: string }>;
+}
 
-export default function ContactPage() {
+export async function generateMetadata({
+  params,
+}: ContactPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t("contactTitle"),
+    description: t("contactDescription"),
+    openGraph: {
+      type: "website",
+      url: "https://elanlogic.com/contact",
+    },
+    alternates: {
+      canonical: locale === "en" ? "/contact" : `/${locale}/contact`,
+      languages: {
+        en: "/contact",
+        "pt-BR": "/pt-BR/contact",
+      },
+    },
+  };
+}
+
+export default async function ContactPage({ params }: ContactPageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "contact" });
+  const tWhatsApp = await getTranslations({ locale, namespace: "whatsapp" });
+
   return (
     <>
       <script
@@ -32,13 +53,11 @@ export default function ContactPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Let&apos;s Build{" "}
-              <span className="text-primary">Something Great</span>
+              {t("heroTitle")}{" "}
+              <span className="text-primary">{t("heroTitleHighlight")}</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
-              Ready to start your project? We&apos;d love to hear from you.
-              Reach out and let&apos;s discuss how we can help grow your
-              business.
+              {t("heroDescription")}
             </p>
           </div>
         </Container>
@@ -55,22 +74,24 @@ export default function ContactPage() {
                       <MessageCircle className="h-8 w-8" />
                     </div>
                     <h2 className="mt-4 text-2xl font-bold">
-                      WhatsApp is Our Primary Channel
+                      {t("whatsappPrimary")}
                     </h2>
                     <p className="mt-2 text-muted-foreground">
-                      For the fastest response, reach out to us on WhatsApp.
-                      We&apos;re typically available during business hours and
-                      aim to respond within a few hours.
+                      {t("whatsappDescription")}
                     </p>
                     <div className="mt-6">
-                      <Button size="lg" className="bg-[#25D366] hover:bg-[#128C7E]" asChild>
+                      <Button
+                        size="lg"
+                        className="bg-[#25D366] hover:bg-[#128C7E]"
+                        asChild
+                      >
                         <a
-                          href={getWhatsAppUrl()}
+                          href={getWhatsAppUrl(tWhatsApp("defaultMessage"))}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <MessageCircle className="mr-2 h-5 w-5" />
-                          Chat on WhatsApp
+                          {t("chatOnWhatsApp")}
                         </a>
                       </Button>
                     </div>
@@ -78,7 +99,7 @@ export default function ContactPage() {
 
                   <div className="border-t pt-8">
                     <h3 className="text-center font-semibold">
-                      Other Ways to Reach Us
+                      {t("otherWays")}
                     </h3>
                     <div className="mt-6 grid gap-6 sm:grid-cols-2">
                       <div className="flex items-start space-x-4">
@@ -86,7 +107,7 @@ export default function ContactPage() {
                           <Mail className="h-5 w-5" />
                         </div>
                         <div>
-                          <p className="font-medium">Email</p>
+                          <p className="font-medium">{t("email")}</p>
                           <a
                             href="mailto:nelsonkenzotamashiro@gmail.com"
                             className="text-sm text-muted-foreground hover:text-primary"
@@ -100,9 +121,9 @@ export default function ContactPage() {
                           <MapPin className="h-5 w-5" />
                         </div>
                         <div>
-                          <p className="font-medium">Location</p>
+                          <p className="font-medium">{t("location")}</p>
                           <p className="text-sm text-muted-foreground">
-                            Remote - Worldwide
+                            {t("locationValue")}
                           </p>
                         </div>
                       </div>
@@ -113,7 +134,7 @@ export default function ContactPage() {
             </Card>
 
             <div className="mt-12 text-center">
-              <h3 className="font-semibold">Connect With Us</h3>
+              <h3 className="font-semibold">{t("connectWithUs")}</h3>
               <div className="mt-4 flex justify-center space-x-6">
                 <a
                   href={siteConfig.social.twitter}

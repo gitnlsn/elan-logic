@@ -1,24 +1,44 @@
 import type { Metadata } from "next";
 import { Layout, ShoppingCart, Cloud, Check, ArrowRight } from "lucide-react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/container";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { services } from "@/data/services";
 import { getWhatsAppUrl } from "@/lib/constants";
 import { getServiceSchema } from "@/lib/schemas";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description:
-    "Professional web development services: Landing Pages for conversions, E-commerce stores for online sales, and SaaS applications for scalable businesses. Custom-built solutions.",
-  openGraph: {
-    type: "website",
-    url: "https://elanlogic.com/services",
-  },
-  alternates: {
-    canonical: "/services",
-  },
-};
+interface ServicesPageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: ServicesPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t("servicesTitle"),
+    description: t("servicesDescription"),
+    openGraph: {
+      type: "website",
+      url: "https://elanlogic.com/services",
+    },
+    alternates: {
+      canonical: locale === "en" ? "/services" : `/${locale}/services`,
+      languages: {
+        en: "/services",
+        "pt-BR": "/pt-BR/services",
+      },
+    },
+  };
+}
 
 const iconMap: Record<string, React.ReactNode> = {
   Layout: <Layout className="h-10 w-10" />,
@@ -26,7 +46,52 @@ const iconMap: Record<string, React.ReactNode> = {
   Cloud: <Cloud className="h-10 w-10" />,
 };
 
-export default function ServicesPage() {
+export default async function ServicesPage({ params }: ServicesPageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "services" });
+  const tWhatsApp = await getTranslations({ locale, namespace: "whatsapp" });
+
+  const services = [
+    {
+      id: "landing-page",
+      title: t("landingPage.title"),
+      description: t("landingPage.description"),
+      features: [
+        t("landingPage.features.responsive"),
+        t("landingPage.features.conversion"),
+        t("landingPage.features.fast"),
+        t("landingPage.features.seo"),
+      ],
+      icon: "Layout",
+    },
+    {
+      id: "ecommerce",
+      title: t("ecommerce.title"),
+      description: t("ecommerce.description"),
+      features: [
+        t("ecommerce.features.catalog"),
+        t("ecommerce.features.payment"),
+        t("ecommerce.features.inventory"),
+        t("ecommerce.features.orders"),
+      ],
+      icon: "ShoppingCart",
+    },
+    {
+      id: "saas",
+      title: t("saas.title"),
+      description: t("saas.description"),
+      features: [
+        t("saas.features.auth"),
+        t("saas.features.billing"),
+        t("saas.features.dashboard"),
+        t("saas.features.api"),
+      ],
+      icon: "Cloud",
+    },
+  ];
+
   return (
     <>
       <script
@@ -39,12 +104,11 @@ export default function ServicesPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Services Tailored to{" "}
-              <span className="text-primary">Your Business</span>
+              {t("pageTitle")}{" "}
+              <span className="text-primary">{t("pageTitleHighlight")}</span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
-              From simple landing pages to complex SaaS applications, we have
-              the expertise to bring your vision to life.
+              {t("pageDescription")}
             </p>
           </div>
         </Container>
@@ -56,7 +120,7 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <Card
                 key={service.id}
-                className={`overflow-hidden ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
+                className="overflow-hidden"
               >
                 <div className="grid md:grid-cols-2">
                   <CardHeader className="flex flex-col justify-center p-8">
@@ -69,7 +133,7 @@ export default function ServicesPage() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="bg-muted/30 p-8">
-                    <h4 className="font-semibold">What&apos;s Included:</h4>
+                    <h4 className="font-semibold">{t("whatsIncluded")}</h4>
                     <ul className="mt-4 space-y-3">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-start">
@@ -92,16 +156,19 @@ export default function ServicesPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Not Sure What You Need?
+              {t("notSure")}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Let&apos;s have a conversation about your project. We&apos;ll help
-              you identify the best solution for your business goals.
+              {t("notSureDescription")}
             </p>
             <div className="mt-10">
               <Button size="lg" asChild>
-                <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-                  Let&apos;s Talk
+                <a
+                  href={getWhatsAppUrl(tWhatsApp("defaultMessage"))}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("letsTalk")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>

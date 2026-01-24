@@ -21,13 +21,14 @@ export function getOrganizationSchema() {
   };
 }
 
-export function getWebSiteSchema() {
+export function getWebSiteSchema(locale: string = "en") {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
+    inLanguage: locale === "pt-BR" ? "pt-BR" : "en-US",
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -35,7 +36,9 @@ export function getWebSiteSchema() {
   };
 }
 
-export function getServiceSchema() {
+export function getServiceSchema(locale: string = "en") {
+  const isPortuguese = locale === "pt-BR";
+
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -45,46 +48,64 @@ export function getServiceSchema() {
       url: siteConfig.url,
     },
     serviceType: "Web Development",
-    description: "Professional web development services including Landing Pages, E-commerce Solutions, and SaaS Development.",
+    description: isPortuguese
+      ? "Serviços profissionais de desenvolvimento web incluindo Landing Pages, Soluções de E-commerce e Desenvolvimento SaaS."
+      : "Professional web development services including Landing Pages, E-commerce Solutions, and SaaS Development.",
+    inLanguage: isPortuguese ? "pt-BR" : "en-US",
     offers: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Landing Page Development",
-          description: "High-converting landing pages designed to turn visitors into customers.",
+          name: isPortuguese
+            ? "Desenvolvimento de Landing Page"
+            : "Landing Page Development",
+          description: isPortuguese
+            ? "Landing pages de alta conversão projetadas para transformar visitantes em clientes."
+            : "High-converting landing pages designed to turn visitors into customers.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "E-commerce Development",
-          description: "Custom online stores built for growth and seamless shopping experiences.",
+          name: isPortuguese
+            ? "Desenvolvimento de E-commerce"
+            : "E-commerce Development",
+          description: isPortuguese
+            ? "Lojas online personalizadas construídas para crescimento e experiências de compra fluidas."
+            : "Custom online stores built for growth and seamless shopping experiences.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "SaaS Development",
-          description: "Scalable software-as-a-service applications built with modern technologies.",
+          name: isPortuguese ? "Desenvolvimento SaaS" : "SaaS Development",
+          description: isPortuguese
+            ? "Aplicações software-as-a-service escaláveis construídas com tecnologias modernas."
+            : "Scalable software-as-a-service applications built with modern technologies.",
         },
       },
     ],
   };
 }
 
-export function getLocalBusinessSchema() {
+export function getLocalBusinessSchema(locale: string = "en") {
+  const isPortuguese = locale === "pt-BR";
+
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: siteConfig.name,
     url: siteConfig.url,
-    description: siteConfig.description,
+    description: isPortuguese
+      ? "Agência de desenvolvimento web especializada em sites de alta conversão, e-commerce e soluções SaaS."
+      : siteConfig.description,
     image: `${siteConfig.url}/og/default.svg`,
     priceRange: "$$",
     email: "nelsonkenzotamashiro@gmail.com",
+    inLanguage: isPortuguese ? "pt-BR" : "en-US",
     sameAs: [
       siteConfig.social.twitter,
       siteConfig.social.linkedin,
@@ -97,14 +118,18 @@ export function getLocalBusinessSchema() {
   };
 }
 
-export function getBlogSchema() {
+export function getBlogSchema(locale: string = "en") {
+  const isPortuguese = locale === "pt-BR";
+
   return {
     "@context": "https://schema.org",
     "@type": "Blog",
     name: `${siteConfig.name} Blog`,
     url: `${siteConfig.url}/blog`,
-    description:
-      "Insights on landing pages, e-commerce, and SaaS development from the team at Elan Logic.",
+    description: isPortuguese
+      ? "Insights sobre landing pages, e-commerce e desenvolvimento SaaS da equipe da Elan Logic."
+      : "Insights on landing pages, e-commerce, and SaaS development from the team at Elan Logic.",
+    inLanguage: isPortuguese ? "pt-BR" : "en-US",
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -113,22 +138,31 @@ export function getBlogSchema() {
   };
 }
 
-export function getBlogPostSchema(post: {
-  title: string;
-  description: string;
-  slug: string;
-  publishedAt: string;
-  updatedAt?: string;
-  author: string;
-}) {
+export function getBlogPostSchema(
+  post: {
+    title: string;
+    description: string;
+    slug: string;
+    publishedAt: string;
+    updatedAt?: string;
+    author: string;
+  },
+  locale: string = "en"
+) {
+  const isPortuguese = locale === "pt-BR";
+  const blogPath = isPortuguese
+    ? `/pt-BR/blog/${post.slug}`
+    : `/blog/${post.slug}`;
+
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    url: `${siteConfig.url}/blog/${post.slug}`,
+    url: `${siteConfig.url}${blogPath}`,
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
+    inLanguage: isPortuguese ? "pt-BR" : "en-US",
     author: {
       "@type": "Organization",
       name: post.author,
@@ -145,7 +179,7 @@ export function getBlogPostSchema(post: {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${siteConfig.url}/blog/${post.slug}`,
+      "@id": `${siteConfig.url}${blogPath}`,
     },
   };
 }
