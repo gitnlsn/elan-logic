@@ -84,7 +84,7 @@ export function getLocalBusinessSchema() {
     description: siteConfig.description,
     image: `${siteConfig.url}/og/default.svg`,
     priceRange: "$$",
-    email: "hello@elanlogic.com",
+    email: "nelsonkenzotamashiro@gmail.com",
     sameAs: [
       siteConfig.social.twitter,
       siteConfig.social.linkedin,

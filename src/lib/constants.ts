@@ -4,7 +4,7 @@ export const siteConfig = {
     "Web development agency specializing in high-converting websites, e-commerce, and SaaS solutions.",
   url: "https://elanlogic.com",
   whatsapp: {
-    number: "5511999999999", // Replace with actual number
+    number: "5511975153417",
     message: "Hi! I'm interested in learning more about your web development services.",
   },
   nav: [

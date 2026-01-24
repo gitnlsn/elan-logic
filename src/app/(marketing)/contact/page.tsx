@@ -88,10 +88,10 @@ export default function ContactPage() {
                         <div>
                           <p className="font-medium">Email</p>
                           <a
-                            href="mailto:hello@elanlogic.com"
+                            href="mailto:nelsonkenzotamashiro@gmail.com"
                             className="text-sm text-muted-foreground hover:text-primary"
                           >
-                            hello@elanlogic.com
+                            nelsonkenzotamashiro@gmail.com
                           </a>
                         </div>
                       </div>
