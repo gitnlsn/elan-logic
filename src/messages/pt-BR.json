@@ -93,7 +93,7 @@
     },
     "savoirLink": {
       "title": "Savoir Link",
-      "description": "Uma plataforma de networking profissional e compartilhamento de conhecimento conectando especialistas com pessoas que buscam orientação especializada."
+      "description": "Uma plataforma de networking profissional conectando especialistas com pessoas que buscam orientação especializada."
     }
   },
   "process": {
@@ -152,7 +152,7 @@
     "storyTitle": "Nossa História",
     "storyP1": "Fundada com uma missão simples: ajudar empresas a prosperar no mundo digital. Notamos que muitas empresas lutavam para traduzir sua visão em uma presença online eficaz, frequentemente se conformando com templates genéricos ou soluções caras demais.",
     "storyP2": "Nos propusemos a mudar isso oferecendo desenvolvimento web personalizado que é acessível e orientado a resultados. Hoje, trabalhamos com empresas de todos os tamanhos, de startups lançando sua primeira landing page a empresas estabelecidas escalando suas operações de e-commerce.",
-    "projectsDelivered": "Projetos Entregues",
+    "onTimeDelivery": "Entrega no Prazo",
     "clientSatisfaction": "Satisfação do Cliente",
     "yearsExperience": "Anos de Experiência",
     "valuesTitle": "Nossos Valores",

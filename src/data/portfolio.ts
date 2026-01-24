@@ -23,7 +23,7 @@ export const portfolio: PortfolioProject[] = [
     id: "savoir-link",
     title: "Savoir Link",
     description:
-      "A professional networking and knowledge-sharing platform connecting experts with those seeking specialized guidance.",
+      "A professional networking platform connecting experts with those seeking specialized guidance.",
     url: "https://www.savoirlink.com/",
     image: "/images/portfolio/savoir-link.svg",
     tags: ["SaaS", "Next.js", "Authentication"],

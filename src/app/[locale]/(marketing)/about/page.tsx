@@ -98,13 +98,13 @@ export default async function AboutPage({ params }: AboutPageProps) {
             <div className="rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 p-8">
               <div className="grid gap-4">
                 <div className="rounded-lg bg-background p-6 shadow-sm">
-                  <p className="text-4xl font-bold text-primary">50+</p>
+                  <p className="text-4xl font-bold text-primary">100%</p>
                   <p className="text-sm text-muted-foreground">
-                    {t("projectsDelivered")}
+                    {t("onTimeDelivery")}
                   </p>
                 </div>
                 <div className="rounded-lg bg-background p-6 shadow-sm">
-                  <p className="text-4xl font-bold text-primary">95%</p>
+                  <p className="text-4xl font-bold text-primary">100%</p>
                   <p className="text-sm text-muted-foreground">
                     {t("clientSatisfaction")}
                   </p>

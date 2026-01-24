@@ -1,22 +1,33 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
+import quartierFlowImg from "@/assets/screenshots/quartier-flow.png";
+import laluDecorImg from "@/assets/screenshots/lalu-decor.png";
+import savoirlinkImg from "@/assets/screenshots/savoirlink.png";
+
 export function Portfolio() {
   const t = useTranslations("portfolio");
 
-  const portfolio = [
+  const portfolio: {
+    id: string;
+    title: string;
+    description: string;
+    url: string;
+    image: StaticImageData;
+    tags: string[];
+  }[] = [
     {
       id: "quartier-flow",
       title: t("quartierFlow.title"),
       description: t("quartierFlow.description"),
       url: "https://www.quartierflow.store/",
-      image: "/images/portfolio/quartier-flow.svg",
+      image: quartierFlowImg,
       tags: ["E-commerce", "Next.js", "Stripe"],
     },
     {
@@ -24,7 +35,7 @@ export function Portfolio() {
       title: t("laluDecor.title"),
       description: t("laluDecor.description"),
       url: "https://laludecor.vercel.app/",
-      image: "/images/portfolio/lalu-decor.svg",
+      image: laluDecorImg,
       tags: ["Portfolio", "React", "Tailwind CSS"],
     },
     {
@@ -32,7 +43,7 @@ export function Portfolio() {
       title: t("savoirLink.title"),
       description: t("savoirLink.description"),
       url: "https://www.savoirlink.com/",
-      image: "/images/portfolio/savoir-link.svg",
+      image: savoirlinkImg,
       tags: ["SaaS", "Next.js", "Authentication"],
     },
   ];
@@ -53,7 +64,7 @@ export function Portfolio() {
           {portfolio.map((project) => (
             <Card
               key={project.id}
-              className="group overflow-hidden transition-all hover:shadow-lg"
+              className="group overflow-hidden transition-all hover:shadow-lg pt-0 rounded-t-none gap-0"
             >
               <div className="relative aspect-video overflow-hidden bg-muted">
                 <Image

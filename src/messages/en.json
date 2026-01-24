@@ -93,7 +93,7 @@
     },
     "savoirLink": {
       "title": "Savoir Link",
-      "description": "A professional networking and knowledge-sharing platform connecting experts with those seeking specialized guidance."
+      "description": "A professional networking platform connecting experts with those seeking specialized guidance."
     }
   },
   "process": {
@@ -152,7 +152,7 @@
     "storyTitle": "Our Story",
     "storyP1": "Founded with a simple mission: to help businesses thrive in the digital world. We noticed that many companies struggled to translate their vision into an effective online presence, often settling for generic templates or overpriced solutions.",
     "storyP2": "We set out to change that by offering custom web development that's both accessible and results-oriented. Today, we work with businesses of all sizes, from startups launching their first landing page to established companies scaling their e-commerce operations.",
-    "projectsDelivered": "Projects Delivered",
+    "onTimeDelivery": "On-Time Delivery",
     "clientSatisfaction": "Client Satisfaction",
     "yearsExperience": "Years of Experience",
     "valuesTitle": "Our Values",
